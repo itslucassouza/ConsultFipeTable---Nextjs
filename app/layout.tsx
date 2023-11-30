@@ -12,16 +12,16 @@ export default function RootLayout(props: React.PropsWithChildren) {
 
   return (
     <QueryClientProvider client={queryClient}>
-    <ReduxProvider>
-      <html lang="en">
-        <body>
-          <Box>
-            <Global styles={globalStyles} />
-            {children}
-          </Box>
-        </body>
-      </html>
-    </ReduxProvider>
+      <ReduxProvider>
+        <html lang="en">
+          <body>
+            <Box>
+              <Global styles={globalStyles} />
+              {children}
+            </Box>
+          </body>
+        </html>
+      </ReduxProvider>
     </QueryClientProvider>
   )
 }

@@ -29,21 +29,21 @@ export default function IndexPage() {
         <Typography component="h2" fontWeight="bold">
           Consulte o valor de um veículo de forma gratuita
         </Typography>
-      <Paper
-        sx={{
-          padding: "15px 40px",
-        }}
-      >
-        <SelectBrand />
-        <SelectModel />
-        {model && (
-          <Stack spacing={2} alignItems="center">
-            <SelectYear />
-            <ConsultButton />
-          </Stack>
-        )}
+        <Paper
+          sx={{
+            padding: "15px 40px",
+          }}
+        >
+          <SelectBrand />
+          <SelectModel />
+          {model && (
+            <Stack spacing={2} alignItems="center">
+              <SelectYear />
+              <ConsultButton />
+            </Stack>
+          )}
 
-      </Paper>
+        </Paper>
       </Box>
 
     </>

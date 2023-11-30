@@ -6,10 +6,10 @@ import { store } from '@/app/store';
 import ConsultButton from '.';
 
 jest.mock('next/router', () => ({
-    useRouter: jest.fn(() => ({
-      push: jest.fn(),
-    })),
-  }));
+  useRouter: jest.fn(() => ({
+    push: jest.fn(),
+  })),
+}));
 
 const queryClient = new QueryClient();
 

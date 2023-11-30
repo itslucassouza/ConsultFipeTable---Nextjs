@@ -1,4 +1,4 @@
-import React, {  } from 'react';
+import React, { } from 'react';
 import { useDispatch } from 'react-redux';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
@@ -14,10 +14,10 @@ const SelectBrand = () => {
   const dispatch = useDispatch();
   const brand = useAppSelector((state) => state.brand);
 
-  const {data: brands, isLoading} = useGetBrand()
+  const { data: brands, isLoading } = useGetBrand()
 
-  if(isLoading) {
-    return <Skeleton variant="rectangular"  height={60} />
+  if (isLoading) {
+    return <Skeleton variant="rectangular" height={60} />
   }
 
   const handleChange = (event: SelectChangeEvent<string>) => {

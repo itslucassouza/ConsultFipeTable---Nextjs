@@ -39,7 +39,8 @@ export default function Result() {
             >
                 Tabela Fipe: Preço {result?.Modelo} {result?.AnoModelo}
             </Typography>
-            <Chip label={`R$: ${result?.Valor}`}
+            <Chip
+                label={`R$: ${result?.Valor}`}
                 sx={{
                     background: "#00A48C",
                     color: "white",

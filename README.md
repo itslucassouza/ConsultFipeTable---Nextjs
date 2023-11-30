@@ -1,6 +1,6 @@
 # Tabela Fipe Consulta
 
-![Tabela Fipe Consulta](link_para_uma_imagem_relacionada_ao_seu_projeto)
+![Tabela Fipe Consulta]
 
 ## Descrição
 Este projeto é uma aplicação simples para consultar informações na Tabela Fipe, fornecendo detalhes sobre veículos, como marca, modelo, ano e valor.
@@ -30,4 +30,4 @@ store: Estado global gerenciado pelo Redux.
 utils: Utilitários diversos.
 
 
-Desenvolvido por [Seu Nome]
+Desenvolvido por Lucas Souza

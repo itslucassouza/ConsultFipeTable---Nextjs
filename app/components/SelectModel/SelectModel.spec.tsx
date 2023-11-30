@@ -24,7 +24,7 @@ const renderComponent = () => {
 
 describe('SelectModel Component', () => {
     it('renders SelectModel correctly', async () => {
-         const mockData = [
+        const mockData = [
             { codigo: '1', nome: 'Modelo 1' },
             { codigo: '2', nome: 'Modelo 2' },
         ];
