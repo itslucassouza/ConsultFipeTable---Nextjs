@@ -1,13 +1,11 @@
-'use client'
+"use client";
 
-import { Box, Paper, Stack, Typography } from '@mui/material'
+import { Box, Grid, Paper, Typography } from '@mui/material'
 import SelectBrand from './components/SelectBrand'
 import SelectModel from './components/SelectModel'
 import SelectYear from './components/SelectYear'
-import { Global } from '@emotion/react'
-import globalStyles from './globalStyles'
-import { useAppSelector } from './store'
 import ConsultButton from './components/ConsultButton'
+import { useAppSelector } from './store'
 
 export default function IndexPage() {
   const model = useAppSelector((state) => state.model);
@@ -22,7 +20,9 @@ export default function IndexPage() {
           justifyContent: "center",
           height: "100vh",
           gap: 1,
-        }}>
+          textAlign: 'center',
+        }}
+      >
         <Typography variant="h5" fontWeight="bold" component="h2">
           Tabela Fipe
         </Typography>
@@ -30,24 +30,31 @@ export default function IndexPage() {
           Consulte o valor de um veículo de forma gratuita
         </Typography>
         <Paper
-          sx={{
-            padding: "15px 40px",
+           sx={{
+            padding: '15px 40px',
+            display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
           }}
         >
-          <SelectBrand />
-          <SelectModel />
-          {model && (
-            <Stack spacing={2} alignItems="center">
-              <SelectYear />
-              <ConsultButton />
-            </Stack>
-          )}
-
+            <Grid item xs={12} sm={12} md={12}>
+              <SelectBrand />
+            </Grid>
+            <Grid item xs={12} sm={12} md={12}>
+              <SelectModel />
+            </Grid>
+            {model && (
+              <>
+                <Grid item xs={12} sm={12} md={12}>
+                  <SelectYear />
+                </Grid>
+                <Grid item xs={12} sm={12} md={12}>
+                  <ConsultButton />
+                </Grid>
+              </>
+            )}
         </Paper>
       </Box>
-
     </>
   )
 }
-
-

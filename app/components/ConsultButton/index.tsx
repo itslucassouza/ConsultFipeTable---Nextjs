@@ -3,7 +3,7 @@
 import { useAppSelector } from "@/app/store";
 import { Button, ButtonProps, styled } from "@mui/material";
 import { purple } from "@mui/material/colors";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 export default function ConsultButton() {
     const router = useRouter()
@@ -15,7 +15,7 @@ export default function ConsultButton() {
         '&:hover': {
             backgroundColor: "#5D00BF",
         },
-        width: "80%",
+        width: "100%",
         fontSize: "12px",
         padding: "10px 30px",
         textTransform: "none"
@@ -24,7 +24,8 @@ export default function ConsultButton() {
     return (
         <ColorButton
             onClick={() => router.push("/result")}
-            disabled={!year} variant="contained"
+            disabled={!year} 
+            variant="contained"
         >
             Consultar preço
         </ColorButton>

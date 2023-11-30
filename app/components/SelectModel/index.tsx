@@ -15,15 +15,12 @@ const SelectModel = () => {
   const { brand, model } = useAppSelector((state) => state);
   const { data: modelData, isLoading } = useGetModel(brand)
 
-  if (isLoading) {
-    return <Skeleton variant="rectangular" height={60} />
-  }
 
   const handleChange = (event: SelectChangeEvent<string>) => {
     const selectedModel = event.target.value;
     dispatch(addModel(selectedModel));
   };
-
+ 
   return (
     <div>
       <FormControl sx={{ m: 1, width: 300 }}>
@@ -35,7 +32,7 @@ const SelectModel = () => {
           onChange={handleChange}
           input={<OutlinedInput label="Name" />}
         >
-          {modelData?.length >= 0 && modelData?.map((item: ModelType) => (
+          {modelData?.modelos?.map((item: ModelType) => (
             <MenuItem key={item.codigo} value={item.codigo}>
               {item.nome}
             </MenuItem>

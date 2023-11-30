@@ -16,9 +16,9 @@ const SelectBrand = () => {
 
   const { data: brands, isLoading } = useGetBrand()
 
-  if (isLoading) {
-    return <Skeleton variant="rectangular" height={60} />
-  }
+  // if (isLoading) {
+  //   return <Skeleton variant="rectangular" height={60} />
+  // }
 
   const handleChange = (event: SelectChangeEvent<string>) => {
     const selectedBrand = event.target.value;
